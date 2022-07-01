@@ -49,7 +49,7 @@ const x = 1.55;
 function exibeClick(evento) {
       if (this.classList.contains('sorveteria') && meuSaldo >= this.getAttribute('value')) {
             meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * 5)
+            this.setAttribute('value', this.getAttribute('value') * x)
             saldoHtml.innerHTML = currency(meuSaldo)
             sorvQTD++
             this.children[0].innerText = `${sorvQTD}x`;
