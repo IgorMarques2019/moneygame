@@ -49,7 +49,7 @@ const x = 2.75;
 function exibeClick(evento) {
       if (this.classList.contains('sorveteria') && meuSaldo >= this.getAttribute('value')) {
             meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
+            this.setAttribute('value', this.getAttribute('value') * 5)
             saldoHtml.innerHTML = currency(meuSaldo)
             sorvQTD++
             this.children[0].innerText = `${sorvQTD}x`;
@@ -142,6 +142,6 @@ setInterval(() => {
 function moneyMachine() {
       meuSaldo += (2 * sorvQTD) + (35 * restQTD) + (80 * restQTD) + (150 * fQTD) + (250 * hotQTD) + (450 * turQTD) + (1000 * agmscQTD) + (10000 * corQTD) + (20000 * agroQTD);
       saldoHtml.innerHTML = currency(meuSaldo)
-      let psecMoney = (2 * sorvQTD) + (35 * restQTD) + (80 * restQTD) + (150 * fQTD) + (250 * hotQTD) + (450 * turQTD) + (1000 * agmscQTD) + (10000 * corQTD) + (20000 * agroQTD);
+      let psecMoney = (2 * sorvQTD) + (35 * rvQTD) + (80 * restQTD) + (150 * fQTD) + (250 * hotQTD) + (450 * turQTD) + (1000 * agmscQTD) + (10000 * corQTD) + (20000 * agroQTD);
       psec.innerHTML = (`${currency(psecMoney)} /2s`)
 }
