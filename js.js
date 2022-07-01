@@ -26,8 +26,8 @@ const prePS = document.querySelector('.pricePS')
 const workButton = document.querySelector(".work")
 
 workButton.addEventListener('click', () => {
-      meuSaldo += 0.02;
-      saldoHtml.innerHTML = currency(meuSaldo)
+  meuSaldo += 50;
+  saldoHtml.innerHTML = currency(meuSaldo)
 })
 
 let sorvQTD = 0;
@@ -42,106 +42,110 @@ let agroQTD = 0;
 
 let meuSaldo = 0;
 
-
 const parag = document.querySelectorAll('p')
 const x = 2.75;
 
 function exibeClick(evento) {
-      if (this.classList.contains('sorveteria') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            sorvQTD++
-            this.children[0].innerText = `${sorvQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('roupasVest') && meuSaldo >= this.getAttribute('value')) {
+  if (this.classList.contains('sorveteria') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * 5)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    sorvQTD++
+    this.children[0].innerText = `${sorvQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('roupasVest') && meuSaldo >= this.getAttribute('value')) {
 
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            rvQTD++
-            this.children[0].innerText = `${rvQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('restaurantes') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            restQTD++
-            this.children[0].innerText = `${restQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('farmacia') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            fQTD++
-            this.children[0].innerText = `${fQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('hotelaria') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            hotQTD++
-            this.children[0].innerText = `${hotQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('turismo') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            turQTD++
-            this.children[0].innerText = `${turQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('agMusica') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            agmscQTD++
-            this.children[0].innerText = `${agmscQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('corretora') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            corQTD++
-            this.children[0].innerText = `${corQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else if (this.classList.contains('agronegocio') && meuSaldo >= this.getAttribute('value')) {
-            meuSaldo -= this.getAttribute('value')
-            this.setAttribute('value', this.getAttribute('value') * x)
-            saldoHtml.innerHTML = currency(meuSaldo)
-            agroQTD++
-            this.children[0].innerText = `${agroQTD}x`;
-            this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
-      } else {
-            alert('vc é pobre man ;(')
-      }
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    rvQTD++
+    this.children[0].innerText = `${rvQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('restaurantes') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    restQTD++
+    this.children[0].innerText = `${restQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('farmacia') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    fQTD++
+    this.children[0].innerText = `${fQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('hotelaria') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    hotQTD++
+    this.children[0].innerText = `${hotQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('turismo') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    turQTD++
+    this.children[0].innerText = `${turQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('agMusica') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    agmscQTD++
+    this.children[0].innerText = `${agmscQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('corretora') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    corQTD++
+    this.children[0].innerText = `${corQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else if (this.classList.contains('agronegocio') && meuSaldo >= this.getAttribute('value')) {
+    meuSaldo -= this.getAttribute('value')
+    this.setAttribute('value', this.getAttribute('value') * x)
+    saldoHtml.innerHTML = currency(meuSaldo)
+    agroQTD++
+    this.children[0].innerText = `${agroQTD}x`;
+    this.children[1].innerText = `${currency(this.getAttribute('value'))}`;
+  } else {
+    alert('vc é pobre man ;(')
+  }
 }
 
 const money = 1;
 const currency = function (number) {
-      return new Intl.NumberFormat('pt-Br', {
-            style: 'currency',
-            currency: 'BRL',
-            minimumFractionDigits: 2
-      }).format(number);
+  return new Intl.NumberFormat('pt-Br', {
+    style: 'currency',
+    currency: 'BRL',
+    minimumFractionDigits: 2
+  }).format(number);
 };
 
 
 parag.forEach((item) => {
-      item.addEventListener('click', exibeClick)
-      saldoHtml.innerHTML = currency(meuSaldo)
+  item.addEventListener('click', exibeClick)
+  saldoHtml.innerHTML = currency(meuSaldo)
 })
 
 
 setInterval(() => {
-      moneyMachine()
-}, 2500)
+  moneyMachine()
+}, 1000)
 
 
 
 
 function moneyMachine() {
-      meuSaldo += (2 * sorvQTD) + (35 * restQTD) + (80 * restQTD) + (150 * fQTD) + (250 * hotQTD) + (450 * turQTD) + (1000 * agmscQTD) + (10000 * corQTD) + (20000 * agroQTD);
-      saldoHtml.innerHTML = currency(meuSaldo)
-      let psecMoney = (2 * sorvQTD) + (35 * rvQTD) + (80 * restQTD) + (150 * fQTD) + (250 * hotQTD) + (450 * turQTD) + (1000 * agmscQTD) + (10000 * corQTD) + (20000 * agroQTD);
-      psec.innerHTML = (`${currency(psecMoney)} /2s`)
+  meuSaldo += (150 * sorvQTD) + (200 * rvQTD) + (266 * restQTD) + (355 * fQTD) + (474 * hotQTD) + (632 * turQTD) + (842 * agmscQTD) + (1123 * corQTD) + (1498 * agroQTD);
+  let psecMoney = (150 * sorvQTD) + (200 * rvQTD) + (266 * restQTD) + (355 * fQTD) + (474 * hotQTD) + (632 * turQTD) + (842 * agmscQTD) + (1123 * corQTD) + (1498 * agroQTD)
+
+  localStorage.setItem('meuSaldo',meuSaldo)
+  localStorage.setItem('psec',psecMoney)
+
+  saldoHtml.innerHTML = currency(localStorage.getItem('meuSaldo'))
+  psec.innerHTML = (`${currency(psecMoney)} /2s`)
 }
+
