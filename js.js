@@ -44,7 +44,7 @@ let meuSaldo = 0;
 
 
 const parag = document.querySelectorAll('p')
-const x = 5;
+const x = 1.55;
 
 function exibeClick(evento) {
       if (this.classList.contains('sorveteria') && meuSaldo >= this.getAttribute('value')) {
