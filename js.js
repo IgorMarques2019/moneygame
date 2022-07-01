@@ -26,7 +26,7 @@ const prePS = document.querySelector('.pricePS')
 const workButton = document.querySelector(".work")
 
 workButton.addEventListener('click', () => {
-  meuSaldo += 50;
+  meuSaldo += 1;
   saldoHtml.innerHTML = currency(meuSaldo)
 })
 
@@ -145,7 +145,7 @@ function moneyMachine() {
   localStorage.setItem('meuSaldo',meuSaldo)
   localStorage.setItem('psec',psecMoney)
 
-  saldoHtml.innerHTML = currency(localStorage.getItem('meuSaldo'))
+  saldoHtml.innerHTML = currency(meuSaldo)
   psec.innerHTML = (`${currency(psecMoney)} /2s`)
 }
 
