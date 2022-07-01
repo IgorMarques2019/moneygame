@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: #145226;
+  padding: 40px;
+}
+
+body::-webkit-scrollbar {
+
+  width: 4px;
+
+  background-color: #145226;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 11px;
+
+
+}
+
+
+
+.fortune-container {
+  width: 100%;
+  background-color: #10421E;
+  border-bottom: 10px solid #0B2D14;
+  padding: 79px 10px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+}
+
+.fortune-content {
+  max-width: max-content;
+  width: 100%;
+  color: white;
+  word-break: break-all;
+}
+
+.fortune-content h1 {
+  font-size: 3rem;
+}
+
+.nicho-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 79px auto;
+}
+
+.title {
+  font-size: 25px;
+  color: #ffffff;
+  display: flex;
+  place-items: center;
+  gap: 15px;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+.title::before {
+  content: "";
+  width: 26px;
+  height: 6px;
+  display: block;
+  background-color: #91E3A7;
+}
+
+
+.nichos-buy {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.qtdBuy {
+  margin-right: 10px;
+  background-color: #91E3A7;
+  padding: 10px;
+  display: inline-block;
+  color: #10421E;
+}
+
+.nichos-buy p {
+  color: white;
+  border: 0.5px solid white;
+  width: 100%;
+  position: relative;
+}
+
+.nichos-buy p:hover {
+  color: #3b5d44;
+  background-color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.nichos-buy p:hover span {
+  color: #3b5d44;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.pricePS {
+  color: #91E3A7;
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  place-items: center;
+  display: flex;
+  background: white;
+  padding: 5px 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+
+}
+
+.work {
+  padding: 10px 24px;
+  background-color: yellow;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 6px;
+  transition:0.5s;
+}
+
+.work:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color:white;
+  transition:0.5s;
+}
